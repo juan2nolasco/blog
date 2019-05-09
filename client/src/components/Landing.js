@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+// Vista del home
 class Landing extends Component {
     render () {
         return (

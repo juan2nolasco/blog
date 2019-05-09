@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { createPost } from './functions'
-
+// Vista para crear un nuevo post
 class Post extends Component {
     constructor() {
         super()
@@ -15,14 +15,14 @@ class Post extends Component {
     onChange (e) {
         this.setState({ [e.target.name]: e.target.value })
     }
-
+    // Se invoca cuando se crea el formulario.
     onSubmit (e) {
         e.preventDefault()
 
         const post = {
             post_content: this.state.post_content
         }
-
+        // createPost crea un nuevo post.
         createPost(post).then(res => {
             if (res.status == 'success') {
                 alert('Se creo de forma correcta el post');

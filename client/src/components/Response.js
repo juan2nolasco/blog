@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getPosts } from './functions'
 import { createResponse } from './functions'
-
+// Vista para crear un nuevo response
 class Response extends Component {
     constructor() {
         super()
@@ -16,7 +16,7 @@ class Response extends Component {
     onChange (e) {
         this.setState({ [e.target.name]: e.target.value })
     }
-
+    // Se invoca cuando se envia el formulario.
     onSubmit (e) {
         e.preventDefault()
 
@@ -24,7 +24,7 @@ class Response extends Component {
             post_id: this.state.post_id,
             response_content: this.state.response_content
         }
-
+        // createResponse crea un nuevo response.
         createResponse(response).then(res => {
             if (res.status == 'success') {
                 alert('Se creo de forma correcta la respuesta.')

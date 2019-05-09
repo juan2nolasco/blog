@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../database/db');
 
+// Modelo para la tabla posts.
 module.exports = db.sequelize.define(
     'post',
     {

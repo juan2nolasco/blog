@@ -1,0 +1,5 @@
+El backend de la aplicacion esta programado con Node.js, primeramente en la carpeta blog se debe ejecutar el comando npm i
+para que se instalen los paquetes necesarios para el backend, posteriormente se debe acceder a la carpeta client que es el
+frontend de la aplicacion (programado con React.js) y tambien se debe ejecutar el comando npm i. Primero se debe iniciar 
+el servicio de node usando npm run dev, despues se debe iniciar la aplicacion react usando npm start. El SQL de la base de
+datos que use se encuentra en blog.sql. 

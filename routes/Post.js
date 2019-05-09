@@ -5,6 +5,7 @@ const Post = require('../models/Post');
 
 router.use(cors());
 
+// Crea un nuevo post en la base de datos.
 router.post('/', (req, res) => {
     const postData = {
         responses_count: 0,
@@ -16,7 +17,7 @@ router.post('/', (req, res) => {
         res.send({status: 'error', message: err});
     });
 });
-
+// Obtiene todos los post de la base de datos.
 router.get('/', (req, res) => {
     Post.findAll().then(posts => {
         res.send({status: 'success', message: posts});

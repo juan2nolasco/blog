@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../database/db');
 
+// Modelo para la tabla responses.
 module.exports = db.sequelize.define(
     'response',
     {
